@@ -1,0 +1,124 @@
+
+
+ <div id="container">
+    <div id="content">
+      <!-- Nivo Slider Start -->
+      <section class="slider-wrapper">
+        <div id="slideshow" class="nivoSlider"> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="assets/image/slider/slide-1.jpg" alt="slide-1" /></a> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="assets/image/slider/slide-2.jpg" alt="slide-2" /></a> <a class="nivo-imageLink" href="http://themeforest.net/item/polishop-responsive-ecommerce-html-template/4410285?ref=harnishdesign"><img src="assets/image/slider/slide-3.jpg" alt="slide-3" /></a> </div>
+      </section>
+     
+
+      <!-- Nivo Slider End-->
+      <!-- Welcom Text Start-->
+      <div class="welcome">Welcome to Polishop</div>
+      <p><strong>Polishop</strong> Premium Responsive HTML Template. Polishop is a clean and Fully Responsive to use the template for every kind of eCommerce online shop. Great Looks on Desktops, Tablets and Mobiles. Well Documented. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <a href="#">BUY THEME</a>.</p>
+      <!-- Welcom Text End-->
+      <!-- Featured Product Start-->
+      <section class="box">
+        <div class="box-heading">Featured</div>
+        <div class="box-content">
+          <div class="box-product">
+            <div class="flexslider featured_carousel">
+              <ul class="slides">
+                <li *ngFor="let product of featuredProducts">
+                  <div class="slide-inner" >
+                    <div class="image"><a href="product.html"><img src="assets/image/product/lotto-sports-shoes-white-210x210.jpg" [alt]="product.label" /></a></div>
+                    <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">{{product.label}}</a></div>
+                    <div class="price"> {{product.price | currency}} </div>
+                    <div class="cart">
+                      <input type="button" value="Add to Cart" class="button" />
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Featured Product End-->
+      <!-- Product Tab Start-->
+      <section id="product-tab" class="product-tab">
+        <ul id="tabs" class="tabs">
+          <li (click)="handleClick(latest)" #latest><a href="#tab-latest">Latest</a></li>
+          <li (click)="handleClick(bestseller)" #bestseller><a href="#tab-bestseller">Bestseller</a></li>
+          <li (click)="handleClick(special)" #special><a href="#tab-special">Special</a></li>
+        </ul>
+        <div id="tab-latest" class="tab_content">
+          <div class="box-product">
+            <div class="flexslider latest_carousel_tab">
+              <ul class="slides">
+                <li *ngFor="let product of latestProducts">
+                  <div class="slide-inner" >
+                    <div class="image"><a href="product.html"><img src="assets/image/product/lotto-sports-shoes-white-210x210.jpg" [alt]="product.label" /></a></div>
+                    <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">{{product.label}}</a></div>
+                    <div class="price"> {{product.price | currency}} </div>
+                    <div class="cart">
+                      <input type="button" value="Add to Cart" class="button" />
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="tab-bestseller" class="tab_content">
+          <div class="box-product">
+            <div class="flexslider bestseller_carousel_tab">
+              <ul class="slides">
+                <li *ngFor="let product of featuredProducts">
+                  <div class="slide-inner" >
+                    <div class="image"><a href="product.html"><img src="assets/image/product/lotto-sports-shoes-white-210x210.jpg" [alt]="product.label" /></a></div>
+                    <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">{{product.label}}</a></div>
+                    <div class="price"> {{product.price | currency}} </div>
+                    <div class="cart">
+                      <input type="button" value="Add to Cart" class="button" />
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="tab-special" class="tab_content">
+          <div class="box-product">
+            <div class="flexslider special_carousel_tab">
+              <ul class="slides">
+                <li *ngFor="let product of specialProducts">
+                  <div class="slide-inner" >
+                    <div class="image"><a href="product.html"><img src="assets/image/product/lotto-sports-shoes-white-210x210.jpg" [alt]="product.label" /></a></div>
+                    <div class="name"><a href="http://localhost/polishop/index.php?route=product/product&amp;product_id=43">{{product.label}}</a></div>
+                    <div class="price"> {{product.price | currency}} </div>
+                    <div class="cart">
+                      <input type="button" value="Add to Cart" class="button" />
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Product Tab End-->
+      <!-- Carousel Start-->
+      <section id="carousel">
+        <ul class="jcarousel-skin-opencart">
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+          <li><a href="#"><img src="assets/image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
+        </ul>
+      </section>
+      <!-- Carousel End-->
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  

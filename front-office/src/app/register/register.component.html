@@ -1,0 +1,77 @@
+<div id="container">
+    <!--Left Part-->
+    <div id="column-left">
+      <!--Account Links Start-->
+      <div class="box">
+        <div class="box-heading">Account</div>
+        <div class="box-content">
+          <!-- Liens du compte... -->
+        </div>
+      </div>
+      <!--Account Links End-->
+      <!--Latest Product Start-->
+      <div class="box">
+        <div class="box-heading">Latest</div>
+        <div class="box-content">
+          <!-- Produits récents... -->
+        </div>
+      </div>
+      <!--Latest Product End-->
+    </div>
+    <!--Left End-->
+    <!--Middle Part Start-->
+    <div id="content">
+      <!--Breadcrumb Part Start-->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> » <a href="#">Account</a> » <a href="register.html">Register</a>
+      </div>
+      <!--Breadcrumb Part End-->
+      <h1>Register Account</h1>
+      <form enctype="multipart/form-data" #registerForm="ngForm" (ngSubmit)="register(registerForm)" method="post" action="">
+        <h2>Your Personal Details</h2>
+        <div class="content">
+          <table class="form">
+            <tbody>
+              <tr>
+                <td><span class="required">*</span> First Name:</td>
+                <td><input class="large-field" type="text" [(ngModel)]="user.first_name" name="first_name" required></td>
+              </tr>
+              <tr>
+                <td><span class="required">*</span> Last Name:</td>
+                <td><input class="large-field" type="text" [(ngModel)]="user.last_name" name="last_name" required></td>
+              </tr>
+              <tr>
+                <td><span class="required">*</span> E-Mail:</td>
+                <td><input class="large-field" type="email" [(ngModel)]="user.email" name="email" required></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <h2>Your Password</h2>
+        <div class="content">
+          <table class="form">
+            <tbody>
+              <tr>
+                <td><span class="required">*</span> Password:</td>
+                <td><input class="large-field" type="password" [(ngModel)]="user.password" name="password" required></td>
+              </tr>
+              <tr>
+                <td><span class="required">*</span> Confirmer le mot de passe :</td>
+                <td><input class="large-field" type="password" [(ngModel)]="user.password_confirmation" name="password_confirmation" required></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="buttons">
+          <div class="left">
+            <input type="submit" class="button" value="Continue">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--Middle Part End-->
+    <div class="clear"></div>
+  </div>
+  

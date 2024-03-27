@@ -1,0 +1,39 @@
+<h2>List product</h2>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card-box">
+
+      <table class="table table-striped m-0">
+        <thead>
+           
+        <tr>
+          <th>#</th>
+          <th>Label</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pro of product">
+            <th scope="row">{{pro.id}}</th>
+            <td>{{pro.label}}</td>
+            <td>{{pro.price}}</td>
+            <td>{{pro.quantity}}</td>
+            <td>
+              <button (click)="deleteProduct(pro.id)" class="btn btn-danger">Delete</button>
+              <a [routerLink]="['/example/updateProduct', pro.id]" class="btn btn-primary">Edit</a>
+            </td>
+            <td>
+                
+            </td>
+        </tbody>
+      </table>
+      
+
+    </div>
+  </div>
+</div>
+
+     
+      
